@@ -9,22 +9,125 @@
 <script>
     phrase = prompt("Enter a phrase");
     //document.write("You entered - ", phrase); 
-    apple = "appleway";
-    pigLatin = "igpay atinlay";
-    grade = "adegray";
+    //pigLatin = "igpay atinlay";
+    let vowels = 'aeiou';
+    let apple = 'apple';
+    let ear = 'ear';
+    let elephant = 'elephant';
+    let igloo = 'igloo';
+    let ice = 'ice';
+    let octopus = 'octopus';
+    let ocean = 'ocean';
+    let umbrella = 'umbrella';
+    let unicorn = 'unicorn';
+    let consonant = 'pig latin';
+    pig = "pig";
+    latin = "latin";    
+    let consonants = 'grade';
 
-    // Your pig-latin translation code here
+    // Your pig-latin translation code here    
 
-    if (phrase == apple) {
-        // apple --> appleway
-        document.write("You entered - ", apple);
-    } else if
-         (phrase == pigLatin) { 
-        // pig latin --> igpay atinlay
-        document.write("You entered - ", pigLatin);
+    if (phrase == vowels[0]) {
+        // apple --> appleway // vowels "a"
+        document.write("You entered - ", phrase + "way");
+    } 
+    else if
+         (phrase == vowels[1]) { 
+        // apple --> appleway // vowels "e"
+        document.write("You entered - ", phrase + "way");
+    } 
+    else if
+         (phrase == vowels[2]) { 
+        // apple --> appleway // vowels "i"
+        document.write("You entered - ", phrase + "way");
+    } 
+    else if
+         (phrase == vowels[3]) { 
+        // apple --> appleway // vowels "o"
+        document.write("You entered - ", phrase + "way");
+    } 
+     else if 
+         (phrase == vowels[4]) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == apple) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == ear) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == elephant) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == ice) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == igloo) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == octopus) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == ocean) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == umbrella) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if 
+         (phrase == unicorn) { 
+        // apple --> appleway // vowels "u"
+        document.write("You entered - ", phrase + "way");
+    }  
+    else if
+         (phrase.includes(consonant)) { 
+        // pig latin --> igpay atinlay // one consonant
+        // let consonant = 'pig latin';
+        document.write("You entered - ", phrase.slice(1) + phrase[0] + "ay");
+        // phrase.slice(1) + phrase[0] + "ay"   // ig latinpay
+        //  
+    } 
+    else if
+         (phrase.includes(pig)) { 
+        // pig latin --> igpay atinlay // one consonant
+        // let consonant = 'pig latin';
+        document.write("You entered - ", phrase.slice(1) + phrase[0] + "ay");
+        // phrase.slice(1) + phrase[0] + "ay"   // ig latinpay
+        //  
+    } 
+    else if
+         (phrase.includes(latin)) { 
+        // pig latin --> igpay atinlay // one consonant
+        // let consonant = 'pig latin';
+        document.write("You entered - ", phrase.slice(1) + phrase[0] + "ay");
+        // phrase.slice(1) + phrase[0] + "ay"   // ig latinpay
+        //  
     } 
     else {
-       (phrase == grade) 
-        // grade --> adegray
-        document.write("You entered - ", grade);
+       (phrase.includes(consonants)) 
+        // grade --> adegray // two consonants
+        // let consonants = 'grade'
+        document.write("You entered - ", phrase.slice(2) + phrase[0] + phrase[1] + "ay");
     } 
+    
+</script>
+
+</body>
+</html>
