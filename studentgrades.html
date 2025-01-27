@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student grades</title>
+</head>
+<body>
+
+<script>
+    
+    const grades = ["jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27"];
+        //const grades = ["jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27".split("|")];
+        // returns["jim, 25, sue, 32, mary, 34, ann, 22, ted, 28, frank, 15, lisa, 19, mike, 30, ahn, 26, vishaya, 27"];
+    const names =  ["jim, sue, mary, ann, ted, frank, lisa, mike, ahn, vishaya"];
+
+    let jimsgrade = "25";
+    let suesgrade = "32";
+    let marysgrade = "34";
+    let annsgrade = "22";
+    let tedsgrade = "28";
+    let franksgrade = "15";
+    let lisasgrade = "19";
+    let mikesgrade = "30";
+    let ahnsgrade = "26";
+    let vishayasgrade = "27";
+
+    // display each student's name and score 
+    grades[0] = "jim - 25";
+    grades[1] = 'sue - 32';
+    grades[2] = "mary - 34";
+    grades[3] = "ann - 22";
+    grades[4] = "ted - 28";
+    grades[5] = "frank - 15";
+    grades[6] = "lisa - 19";
+    grades[7] = "mike - 30";
+    grades[8] = "ahn - 26";
+    grades[9] = "vishaya - 27";
+    console.log(grades);
+
+    // capitalize the first letter of each student name
+
+    names[0] = "Jim";
+    names[1] = "Sue";
+    names[2] = "Mary";
+    names[3] = "Ann";
+    names[4] = "Ted";
+    names[5] = "Frank";
+    names[6] = "Lisa";
+    names[7] = "Mike";
+    names[8] = "Ahn";
+    names[9] = "Vishaya";
+    console.log(names);
+
+    // display total # of students
+
+    for (let s = 0; s < names.length; s++) {
+        console.log('${s} - ${names[s]}');
+    }
+
+    // display the lowest, highest, and average scores
+
+        // lowest: frank[5], highest: mary[2] 
+    
+    let grades1 = [parseInt(jimsgrade), parseInt(suesgrade), parseInt(marysgrade), parseInt(annsgrade), parseInt(tedsgrade), parseInt(franksgrade), parseInt(lisasgrade), parseInt(mikesgrade), parseInt(ahnsgrade), parseInt(vishayasgrade)];    
+    let sum = 0;
+    let minScore = parseInt(franksgrade);
+    let maxScore = parseInt(marysgrade);
+
+    for (let g in grades1) {
+        sum += grades1[g];
+        if (grades1[g] > minScore) {
+            maxScore = grades1[g];
+        }
+        if (grades1[g] < maxScore) {
+            minScore = grades1[g]
+        }
+    }
+
+    console.log("lowest score = " + minScore);
+    console.log("highest score = " + maxScore);
+    console.log("average score = " + sum/grades1.length);
+
+</script>
+
+</body>
+</html>
