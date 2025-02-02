@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<h1>Functions & validation</h1>
+
+<form id="form1" action="#" onsubmit="return validateForm(this);">
+  first name: <input type="text" name="firstname"><br>
+  last name: <input type="text" name="lastname"><br>
+  password: <input type="text" name="password"><br>
+
+  <button >Check</button>
+</form>
+
+<hr><div id="message"></div>
+
+<script>
+
+  const validateForm = (myForm) => {
+
+    // add validatePassword function here
+
+    let firstname = myForm.firstname.value; // get text of firstname field
+    let lastname = myForm.lastname.value; // get text of #lastname field
+    let formPassword = myForm.password.value; // get text of #password field
+   
+    /* Form validation code goes here
+    */
+
+// Example usage:
+
+    // use this syntax to update 'message' DIV with appropriate wording
+    //$("#message").html("message");
+
+    $("#message").html("Success. Your entrance is valid");
+
+    // invalid message
+
+    if (firstname == "")
+    $("#message").html("First name is missing.");
+    if (lastname == "")
+    $("#message").html("Last name is missing.");
+    if (formPassword == "")
+    $("#message").html("Your password is invalid. Needs 8 or more characters.");
+
+ //   $("#message").html("password is valid");
+    
+    //messagepassword fail or password success
+    return false; // prevent page reload
+  }
+
+  const validatePassword = (myPassword) => {
+    //if (myPassword == "")
+    //$("#message").html("Missing password.");
+   if (myPassword.length >= 7)
+    $("#message").html("Success.");
+    //if (myPassword.LowerCase());
+    //$("#message").html("Success.");
+  };
