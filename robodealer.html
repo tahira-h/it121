@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Robo Dealer</h1>
+
+  <button onclick="dealHand();">Deal Hand</button>
+
+<hr><div id="card_hand"></div>
+
+<script>
+
+  /* define Card object and deck of cards here */
+// suit: heart, club, spades, diamonds
+
+//create an object, make that into an array
+
+//Create an array of the cards
+  const card = ["Ace", "King", "Queen", "Jack", 2, 3, 4, 5, 6, 7, 8, 9, 10];  // 4 top, 9 numbers for 1 suit   do a loop 2-14 and add to the array
+
+  const Jack = {Suit: "Heart", Value: 10}; // for objects {} key-value pairs;
+  const Queen = {Suit: "Club", Value: 9};
+  const King = {Suit: "Spades", Value: 8};
+  const Ace = {Suit: "Diamonds", Value: 7};
+
+  // for loop with a regular array
+  
+  for (let i = 2; i <= 14; i++) { //smallest value 2, to     /
+     //Cards  = cards[i];     // values 2-14, add the value to the array
+     const Cards = {Suit: "Heart", Value: i};
+     const Cardq = {Suit: "Club", Value: i};
+     const Cardk = {Suit: "Spades", Value: i};
+     const Carda = {Suit: "Diamonds", Value: i};
+     const myArray = [{Value: i}, {Suit: "Heart"}]; 
+     const myArray2 = [{Value: i},{Suit: "Club"}];
+     const myArray3 = [{Value: i},{Suit: "Spades"}];
+     const myArray4 = [{Value: i},{Suit: "Diamonds"}];
+     console.log(myArray);
+     console.log(Math.floor(Math.random(card) * 52));
+     console.log(myArray2);
+     console.log(Math.floor(Math.random(card) * 52));
+     console.log(myArray3);
+     console.log(Math.floor(Math.random(card) * 52));
+     console.log(myArray4);
+     console.log(Math.floor(Math.random(card) * 52));
+}
+
+  const dealHand = () => {
+
+    /* code to deal a card hand goes here */
+
+        // Remember to clear the currently-displayed hand before displaying a new hand,
+            //line 35?
+            //console.log(card);
+    
+        console.log(Math.floor(Math.random(card) * 52)); // You can use this command to get a random number between 0 & 51 (the size of your deck):
+
+    // update 'card_hand' DIV with appropriate information
+    $("#card_hand").html("Button clicked");    // Finally, connect your card-drawing function to an HTML button, so you can draw new card hands repeatedly.
+
+    return false; // prevent page reload
+  }
+    //console.log(Object.values = Cards);
+</script>
+
+</body>
+</html>
